@@ -19,7 +19,7 @@ export const Header = () => {
         <div className="relative flex-1 max-w-xl mx-auto">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="What would you like to eat today?"
+            placeholder="วันนี้อยากทานอะไรดี?"
             className="w-full pl-10 bg-muted/50 border-0"
           />
         </div>

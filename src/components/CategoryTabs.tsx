@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const categories = [
-  { id: "all", label: "All", icon: ChefHat },
-  { id: "recommend", label: "Recommend", icon: Star },
-  { id: "rice", label: "Rice", icon: UtensilsCrossed },
-  { id: "soup", label: "Soup", icon: Soup },
-  { id: "noodles", label: "Noodles", icon: Beef },
-  { id: "beverages", label: "Beverages", icon: Coffee },
-  { id: "addon", label: "Add-On", icon: Plus },
+  { id: "all", label: "ทั้งหมด", icon: ChefHat },
+  { id: "recommend", label: "แนะนำ", icon: Star },
+  { id: "rice", label: "ข้าว", icon: UtensilsCrossed },
+  { id: "soup", label: "ซุป", icon: Soup },
+  { id: "noodles", label: "ก๋วยเตี๋ยว", icon: Beef },
+  { id: "beverages", label: "เครื่องดื่ม", icon: Coffee },
+  { id: "addon", label: "เพิ่มเติม", icon: Plus },
 ];
 
 export const CategoryTabs = () => {
@@ -18,7 +18,7 @@ export const CategoryTabs = () => {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold mb-4">
-        Categories <span className="text-secondary">MENU</span>
+        หมวดหมู่ <span className="text-secondary">เมนู</span>
       </h2>
       <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
         {categories.map((category) => {

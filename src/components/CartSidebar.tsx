@@ -27,12 +27,12 @@ export const CartSidebar = ({ items, onUpdateQuantity, onRemove }: CartSidebarPr
   return (
     <Card className="p-6 sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto">
       <h2 className="text-2xl font-bold mb-6">
-        My <span className="text-secondary">Order</span>
+        <span className="text-secondary">คำสั่งซื้อ</span>ของฉัน
       </h2>
 
       <div className="space-y-4 mb-6">
         {items.length === 0 ? (
-          <p className="text-center text-muted-foreground py-8">Your cart is empty</p>
+          <p className="text-center text-muted-foreground py-8">ตะกร้าสินค้าว่างเปล่า</p>
         ) : (
           items.map((item) => (
             <div key={item.id} className="flex gap-3">
@@ -96,15 +96,15 @@ export const CartSidebar = ({ items, onUpdateQuantity, onRemove }: CartSidebarPr
           
           <div className="space-y-2 text-sm mb-4">
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Sub Total</span>
+              <span className="text-muted-foreground">ยอดรวม</span>
               <span className="font-medium">{subtotal.toFixed(2)}.-</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Delivery Fee</span>
+              <span className="text-muted-foreground">ค่าจัดส่ง</span>
               <span className="font-medium">{deliveryFee.toFixed(2)}.-</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">VAT 7%</span>
+              <span className="text-muted-foreground">ภาษีมูลค่าเพิ่ม 7%</span>
               <span className="font-medium">{vat.toFixed(2)}.-</span>
             </div>
           </div>
@@ -112,7 +112,7 @@ export const CartSidebar = ({ items, onUpdateQuantity, onRemove }: CartSidebarPr
           <Separator className="my-4" />
           
           <div className="flex justify-between items-center mb-6">
-            <span className="text-xl font-bold">Total</span>
+            <span className="text-xl font-bold">ยอดรวมทั้งหมด</span>
             <span className="text-2xl font-bold text-secondary">{total.toFixed(2)}.-</span>
           </div>
 
@@ -132,7 +132,7 @@ export const CartSidebar = ({ items, onUpdateQuantity, onRemove }: CartSidebarPr
             className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90"
             size="lg"
           >
-            Go Checkout <ArrowRight className="ml-2 h-5 w-5" />
+            ชำระเงิน <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </>
       )}
