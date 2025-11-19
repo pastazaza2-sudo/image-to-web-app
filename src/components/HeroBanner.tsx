@@ -8,19 +8,19 @@ export const HeroBanner = () => {
       <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            Mostly popular order
+            เมนูยอดนิยมที่สั่งมากที่สุด
             <br />
-            <span className="text-secondary">every month!</span>
+            <span className="text-secondary">ทุกเดือน!</span>
           </h1>
           <p className="text-xl text-white/90">
-            Ready delivery every day at <span className="font-bold">KRUATHAI</span>
+            พร้อมส่งทุกวันที่ <span className="font-bold">ครัวไทย</span>
           </p>
           <Button 
             size="lg"
             variant="secondary"
             className="bg-accent text-secondary font-semibold hover:bg-accent/90 shadow-lg"
           >
-            Order Now! <ArrowRight className="ml-2 h-5 w-5" />
+            สั่งเลย! <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
         
@@ -32,7 +32,7 @@ export const HeroBanner = () => {
             <div className="absolute -inset-12 border-2 border-white/10 rounded-full"></div>
             <img
               src={heroDish}
-              alt="Popular Thai dish"
+              alt="อาหารไทยยอดนิยม"
               className="relative z-10 w-full max-w-md mx-auto rounded-full shadow-2xl"
             />
           </div>
