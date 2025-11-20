@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowLeft, Search, Link2 } from "lucide-react";
+import { ArrowLeft, Search, Link2, Link2Off } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,6 +32,11 @@ const POSSettings = () => {
     localStorage.setItem("connectedDevice", JSON.stringify(device));
   };
 
+  const handleDisconnect = () => {
+    setConnectedDevice(null);
+    localStorage.removeItem("connectedDevice");
+  };
+
   const filteredDevices = mockDevices.filter((device) =>
     device.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -60,9 +65,12 @@ const POSSettings = () => {
               readOnly
               className="flex-1"
             />
-            <Button className="bg-primary text-primary-foreground gap-2">
-              <Link2 className="h-4 w-4" />
-              Connected
+            <Button 
+              className="bg-primary text-primary-foreground gap-2"
+              onClick={handleDisconnect}
+            >
+              <Link2Off className="h-4 w-4" />
+              Disconnect
             </Button>
           </div>
         )}
