@@ -1,7 +1,9 @@
 import { Menu, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 
 export const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
       <div className="container mx-auto flex h-16 items-center gap-4 px-4">
@@ -24,7 +26,10 @@ export const Header = () => {
           />
         </div>
 
-        <button className="hidden lg:block">
+        <button
+          className="hidden lg:block"
+          onClick={() => navigate("/pos-settings")}
+        >
           <Search className="h-5 w-5 text-muted-foreground" />
         </button>
       </div>
